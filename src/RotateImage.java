@@ -1,12 +1,11 @@
-
 import java.util.*;
 
-public class RotateMatrix {
+public class RotateImage {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int m = sc.nextInt(); // will be same as n
+        int m = sc.nextInt();
 
         int[][] mat = new int[n][n];
 
@@ -17,7 +16,7 @@ public class RotateMatrix {
             }
         }
 
-        // Step 1: Transpose
+        // Transpose
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 int temp = mat[i][j];
@@ -26,7 +25,7 @@ public class RotateMatrix {
             }
         }
 
-        // Step 2: Reverse each row
+        // Reverse each row
         for (int i = 0; i < n; i++) {
             int left = 0, right = n - 1;
             while (left < right) {
